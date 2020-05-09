@@ -16,10 +16,12 @@ func getLaunchAgents(path: String, system_info: SystemInfo) -> Array<LaunchItem>
     
     do {
         let files = try fileManager.contentsOfDirectory(atPath: path)
-        for f in files {
-            parsedAgents.append(parseLaunchItem(plistFile: URL(fileURLWithPath: path + f as String),
+        if files.count > 0 {
+            for f in files {
+                parsedAgents.append(parseLaunchItem(plistFile: URL(fileURLWithPath: path + f as String),
                                                 module: "launch_agents",
                                                 system_info: system_info))
+            }
         }
     }
     catch let error as NSError {

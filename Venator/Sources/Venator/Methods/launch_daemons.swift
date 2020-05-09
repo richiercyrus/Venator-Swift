@@ -16,10 +16,12 @@ func getLaunchDaemons(path: String, system_info: SystemInfo) -> Array<LaunchItem
     
     do {
         let files = try fileManager.contentsOfDirectory(atPath: path)
-        for f in files {
-            parsedDaemons.append(parseLaunchItem(plistFile: URL(fileURLWithPath: path + f as String),
+        if files.count > 0 {
+            for f in files {
+                parsedDaemons.append(parseLaunchItem(plistFile: URL(fileURLWithPath: path + f as String),
                                                  module: "launch_daemons",
                                                  system_info: system_info))
+            }
         }
     }
     catch let error as NSError {
