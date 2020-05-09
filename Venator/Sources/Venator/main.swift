@@ -11,30 +11,26 @@ import Foundation
 // parse arguments
 
 // create master struct
-var venator_data = VenatorData(begin_collection: getTimeStamp(),
-                               finish_collection: nil,
-                               system_info: nil,
+var venator_data = VenatorData(system_info: nil,
                                launch_agents: nil,
                                launch_daemons: nil,
                                users: nil)
+//begin_collection: getTimeStamp(),
+//finish_collection: nil,
+
 // get system info
 let system_info = getSystemInfo()
 venator_data.system_info = system_info
-// run collection methods
-//let launch_agents = getLaunchAgents(path: "", system_info: system_info)
-//if launch_agents.count > 0 {
-//    venator_data.launch_agents = launch_agents
-//}
-//let launch_daemons = getLaunchDaemons(path: "", system_info: system_info)
-//if launch_daemons.count > 0 {
-//    venator_data.launch_daemons = launch_daemons
-//}
+//get user info
 let users = getSystemUsers(system_info: system_info)
+// check to see if there is more than one user before assigning to struct
 if users.count > 0 {
     venator_data.users = users
 }
-venator_data.finish_collection = getTimeStamp()
+//venator_data.finish_collection = getTimeStamp()
 // convert data to json
 let final_json = venator_data.toJson(data: venator_data)
 // write data to file or to the cloud
 print(final_json)
+
+
