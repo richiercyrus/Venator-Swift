@@ -15,6 +15,9 @@ struct VenatorData: Encodable {
     var launch_agents:Array<LaunchItem>?
     var launch_daemons:Array<LaunchItem>?
     var users:Array<User>?
+    var system_integrity_protection:SIP?
+    var gatekeeper:GateKeeper?
+    var cron_jobs:Array<CronJob>?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -23,7 +26,7 @@ struct VenatorData: Encodable {
     }
 }
 
-struct SystemInfo: Codable {
+struct SystemInfo: Encodable {
     var hostname:String
     var uuid:String
     var kernel_info:String
@@ -31,13 +34,32 @@ struct SystemInfo: Codable {
     var os_arch:String
 }
 
-struct SigningInfo: Codable {
+struct SIP: Encodable {
+    var hostname:String
+    var uuid:String
+    var status:String
+}
+
+struct GateKeeper: Encodable {
+    var hostname:String
+    var uuid:String
+    var status:String
+}
+
+struct CronJob: Encodable {
+    var hostname:String
+    var uuid:String
+    var user:String
+    var crontab:String
+}
+
+struct SigningInfo: Encodable {
     var appleBinary:Bool
     var authority:Array<String>
     var status:String
 }
 
-struct LaunchItem: Codable {
+struct LaunchItem: Encodable {
     var hostname:String
     var uuid:String
     var programArguments:String
@@ -48,7 +70,7 @@ struct LaunchItem: Codable {
     var runAtLoad:Bool
 }
 
-struct User: Codable {
+struct User: Encodable {
     let hostname:String
     let uuid:String
     let username:String

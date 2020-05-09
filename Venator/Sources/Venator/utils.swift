@@ -9,6 +9,40 @@
 import Foundation
 import CommonCrypto
 
+func isAdmin() -> Bool {
+    if #available(OSX 10.12, *) {
+        if ProcessInfo.processInfo.fullUserName == "System Administrator" || ProcessInfo.processInfo.fullUserName == "root" {
+            return true;
+        }
+        else {
+            return false
+        }
+    } else {
+        return false
+    }
+}
+
+func writeFile(filename: String, data: String) -> Bool {
+    let url = NSURL.fileURL(withPath: filename)
+    let fileManager = FileManager.default
+    if fileManager.fileExists(atPath: filename) {
+        print("[!] File already exists")
+        return false
+    }
+    else {
+        do {
+            try data.write(to: url, atomically: true, encoding: String.Encoding.utf8)
+            return true
+        } catch {
+            return false
+        }
+    }
+}
+
+func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
+}
 
 func getTimeStamp() -> String {
     let timestamp = NSDate().timeIntervalSince1970
