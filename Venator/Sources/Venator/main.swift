@@ -15,8 +15,6 @@ var venator_data = VenatorData(system_info: nil,
                                launch_agents: nil,
                                launch_daemons: nil,
                                users: nil)
-//begin_collection: getTimeStamp(),
-//finish_collection: nil,
 
 // get system info
 let system_info = getSystemInfo()
@@ -27,10 +25,28 @@ let users = getSystemUsers(system_info: system_info)
 if users.count > 0 {
     venator_data.users = users
 }
-//venator_data.finish_collection = getTimeStamp()
+
+let launch_agents = getLaunchAgents(path: "/Library/LaunchAgents/", system_info: system_info)
+if launch_agents.count > 0 {
+    venator_data.launch_agents = launch_agents
+}
+
+let launch_daemons = getLaunchDaemons(path: "/Library/LaunchDaemons/", system_info: system_info)
+if launch_daemons.count > 0 {
+    venator_data.launch_daemons = launch_daemons
+}
+
 // convert data to json
 let final_json = venator_data.toJson(data: venator_data)
 // write data to file or to the cloud
 print(final_json)
 
+
+// *********** To do
+/*
+ Adding collection stop start times
+ //begin_collection: getTimeStamp(),
+ //finish_collection: nil,
+ //venator_data.finish_collection = getTimeStamp()
+ */
 
