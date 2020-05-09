@@ -48,5 +48,11 @@ print(final_json)
  //begin_collection: getTimeStamp(),
  //finish_collection: nil,
  //venator_data.finish_collection = getTimeStamp()
+ 
+ Adding check to see if the user executing the program has root permissions
+ 
+ Adding additional modules from the defualt playground
+ 
+ Porting modules from Venator python into Venator swift
  */
 
