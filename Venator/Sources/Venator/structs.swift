@@ -46,11 +46,9 @@ struct LaunchItem: Codable {
     var signingInfo:SigningInfo
     var label:String
     var runAtLoad:Bool
-    let module:String
 }
 
 struct User: Codable {
-    let module = "users"
     let hostname:String
     let uuid:String
     let username:String

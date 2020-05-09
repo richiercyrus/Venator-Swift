@@ -29,7 +29,7 @@ func getUUID() -> String{
 func parseLaunchItem(plistFile: URL, module:String, system_info:SystemInfo) -> LaunchItem
 {
     let fileManager = FileManager.default
-    var launchItem = LaunchItem(hostname: system_info.hostname, uuid: system_info.uuid, programArguments: "", programExecutable: "", programExecutableHash: "", signingInfo: SigningInfo(appleBinary: false, authority: [], status: ""), label: "", runAtLoad: false, module: module)
+    var launchItem = LaunchItem(hostname: system_info.hostname, uuid: system_info.uuid, programArguments: "", programExecutable: "", programExecutableHash: "", signingInfo: SigningInfo(appleBinary: false, authority: [], status: ""), label: "", runAtLoad: false)
     if fileManager.fileExists(atPath: plistFile.absoluteString.components(separatedBy: "file://")[1]) {
         let dict = NSDictionary(contentsOf: plistFile) as! [String: Any]
         if (dict["ProgramArguments"] != nil && (dict["ProgramArguments"] as! [String]).count > 0) {
