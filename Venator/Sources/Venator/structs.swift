@@ -29,7 +29,6 @@ struct SystemInfo: Codable {
     var kernel_info:String
     var os_ver:String
     var os_arch:String
-    let module = "system_info"
 }
 
 struct SigningInfo: Codable {
