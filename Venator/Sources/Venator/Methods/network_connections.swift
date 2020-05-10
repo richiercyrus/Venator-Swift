@@ -12,7 +12,7 @@ func getNetworkConections(system_info: SystemInfo) -> Array<NetworkConnection> {
     // Set the task parameters
     let task = Process()
     task.launchPath = "/usr/sbin/lsof"
-    task.arguments = ["-i"]
+    task.arguments = ["-i", "-w"]
 
     // Create a Pipe and make the task
     // put all the output there

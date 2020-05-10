@@ -77,9 +77,6 @@ if bash_history.count > 0 {
     venator_data.bash_history = bash_history
 }
 
-// get applications
-//print(getApps(app_path: "/Applications/"))
-
 // get network connections
 print("[+] Gathering network connection data")
 let network_connections = getNetworkConections(system_info: system_info)
@@ -101,9 +98,16 @@ if applications.count > 0 {
 }
 
 print("[+] Gathering LoginItems")
-let loginItems = getLoginItems(path: "/Users/richiecyrus/Library/Application Support/com.apple.backgroundtaskmanagementagent/backgrounditems.btm", system_info: system_info)
-if loginItems.count > 0 {
-    venator_data.loginItems = loginItems
+let login_items = getLoginItems(users: usernames, system_info: system_info)
+if login_items.count > 0 {
+    venator_data.login_items = login_items
+}
+
+// get install history
+print("[+] Gathering install history")
+let install_history = getInstallHistory(withName: "/Library/Receipts/InstallHistory.plist")
+if install_history.count > 0 {
+    venator_data.install_history = install_history
 }
 
 // convert data to json

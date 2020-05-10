@@ -22,7 +22,8 @@ struct VenatorData: Encodable {
     var network_connections:Array<NetworkConnection>?
     var environment_variables:EnvironmentVariables?
     var applications:Array<Application>?
-    var loginItems:Array<Application>?
+    var login_items:Array<Application>?
+    var install_history:Array<InstallHistory>?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -112,4 +113,13 @@ struct Application: Encodable {
     var appExecutablePath:String
     var appHash:String
     var appSigningInfo:SigningInfo
+}
+
+struct InstallHistory: Encodable {
+    var hostname:String
+    var uuid:String
+    var version:String
+    var display_name:String
+    var install_date:String
+    var package_identifiers:Array<String>
 }
