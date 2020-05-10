@@ -8,7 +8,7 @@
 import Foundation
 
 //get login items - this will be a doozy
-func getLoginItems(path: String) -> Void {
+func getLoginItems(path: String, system_info: SystemInfo) -> Void {
     let plist_file = path
     let plist = NSDictionary(contentsOf: URL(fileURLWithPath: plist_file))
     var loginApps:[String] = []
@@ -32,7 +32,7 @@ func getLoginItems(path: String) -> Void {
     loginApps = Array(Set(loginApps))
     for app in loginApps{
         var loginItems = [String:Any]()
-        loginItems = parseApps(app_path: app) as! [String : Any]
+        loginItems = parseApp(app_path: app, system_info: system_info) as! [String : Any]
         loginItems.updateValue("login_items", forKey: "module")
         //loginItems.updateValue(getSystemInfo()["hostname"]!, forKey: "hostname")
         //loginItems.updateValue(getSystemInfo()["UUID"]!, forKey: "UUID")
