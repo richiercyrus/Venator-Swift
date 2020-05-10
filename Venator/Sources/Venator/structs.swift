@@ -18,6 +18,8 @@ struct VenatorData: Encodable {
     var system_integrity_protection:SIP?
     var gatekeeper:GateKeeper?
     var cron_jobs:Array<CronJob>?
+    var bash_history:Array<BashHistory>?
+    var network_connections:Array<NetworkConnection>?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -57,6 +59,23 @@ struct SigningInfo: Encodable {
     var appleBinary:Bool
     var authority:Array<String>
     var status:String
+}
+
+struct NetworkConnection: Encodable {
+    var hostname:String
+    var uuid:String
+    var user:String
+    var process_name:String
+    var process_id:String
+    var TCP_UDP:String
+    var connection_flow:String
+}
+
+struct BashHistory: Encodable {
+    var hostname:String
+    var uuid:String
+    var user:String
+    var bash_commands:String
 }
 
 struct LaunchItem: Encodable {

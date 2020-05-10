@@ -25,6 +25,19 @@
 		72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE212467313E00CBFC2B /* gatekeeper.swift */; };
 		72C6AE242467340200CBFC2B /* cron_jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE232467340200CBFC2B /* cron_jobs.swift */; };
 		72C6AE26246737A100CBFC2B /* applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE25246737A100CBFC2B /* applications.swift */; };
+		72C6AE282467D53D00CBFC2B /* bash_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE272467D53D00CBFC2B /* bash_history.swift */; };
+		72C6AE2A2467D82900CBFC2B /* login_items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE292467D82900CBFC2B /* login_items.swift */; };
+		72C6AE2C2467DE5400CBFC2B /* safari_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE2B2467DE5400CBFC2B /* safari_extensions.swift */; };
+		72C6AE2E2467DE6500CBFC2B /* chrome_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */; };
+		72C6AE302467DE7400CBFC2B /* firefox_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */; };
+		72C6AE322467DE8700CBFC2B /* install_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE312467DE8700CBFC2B /* install_history.swift */; };
+		72C6AE342467DF1F00CBFC2B /* chrome_downloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE332467DF1F00CBFC2B /* chrome_downloads.swift */; };
+		72C6AE362467DF4500CBFC2B /* emond_rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE352467DF4500CBFC2B /* emond_rules.swift */; };
+		72C6AE382467DF6C00CBFC2B /* environment_variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE372467DF6C00CBFC2B /* environment_variables.swift */; };
+		72C6AE3A2467DF8400CBFC2B /* periodic_scripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE392467DF8400CBFC2B /* periodic_scripts.swift */; };
+		72C6AE3C2467DFA600CBFC2B /* network_connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3B2467DFA600CBFC2B /* network_connections.swift */; };
+		72C6AE3E2467DFD300CBFC2B /* event_taps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3D2467DFD300CBFC2B /* event_taps.swift */; };
+		72C6AE402467DFF400CBFC2B /* shell_startup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */; };
 		OBJ_29 /* launch_agents.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* launch_agents.swift */; };
 		OBJ_30 /* launch_daemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* launch_daemons.swift */; };
 		OBJ_31 /* system_info.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* system_info.swift */; };
@@ -59,6 +72,19 @@
 		72C6AE212467313E00CBFC2B /* gatekeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gatekeeper.swift; sourceTree = "<group>"; };
 		72C6AE232467340200CBFC2B /* cron_jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cron_jobs.swift; sourceTree = "<group>"; };
 		72C6AE25246737A100CBFC2B /* applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = applications.swift; sourceTree = "<group>"; };
+		72C6AE272467D53D00CBFC2B /* bash_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bash_history.swift; sourceTree = "<group>"; };
+		72C6AE292467D82900CBFC2B /* login_items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_items.swift; sourceTree = "<group>"; };
+		72C6AE2B2467DE5400CBFC2B /* safari_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = safari_extensions.swift; sourceTree = "<group>"; };
+		72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chrome_extensions.swift; sourceTree = "<group>"; };
+		72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firefox_extensions.swift; sourceTree = "<group>"; };
+		72C6AE312467DE8700CBFC2B /* install_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = install_history.swift; sourceTree = "<group>"; };
+		72C6AE332467DF1F00CBFC2B /* chrome_downloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chrome_downloads.swift; sourceTree = "<group>"; };
+		72C6AE352467DF4500CBFC2B /* emond_rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emond_rules.swift; sourceTree = "<group>"; };
+		72C6AE372467DF6C00CBFC2B /* environment_variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = environment_variables.swift; sourceTree = "<group>"; };
+		72C6AE392467DF8400CBFC2B /* periodic_scripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = periodic_scripts.swift; sourceTree = "<group>"; };
+		72C6AE3B2467DFA600CBFC2B /* network_connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network_connections.swift; sourceTree = "<group>"; };
+		72C6AE3D2467DFD300CBFC2B /* event_taps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event_taps.swift; sourceTree = "<group>"; };
+		72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shell_startup.swift; sourceTree = "<group>"; };
 		OBJ_10 /* launch_agents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launch_agents.swift; sourceTree = "<group>"; };
 		OBJ_11 /* launch_daemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launch_daemons.swift; sourceTree = "<group>"; };
 		OBJ_12 /* system_info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system_info.swift; sourceTree = "<group>"; };
@@ -118,7 +144,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -126,7 +152,6 @@
 				OBJ_17 /* Tests */,
 				OBJ_21 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -160,6 +185,19 @@
 				72C6AE212467313E00CBFC2B /* gatekeeper.swift */,
 				72C6AE232467340200CBFC2B /* cron_jobs.swift */,
 				72C6AE25246737A100CBFC2B /* applications.swift */,
+				72C6AE272467D53D00CBFC2B /* bash_history.swift */,
+				72C6AE292467D82900CBFC2B /* login_items.swift */,
+				72C6AE2B2467DE5400CBFC2B /* safari_extensions.swift */,
+				72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */,
+				72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */,
+				72C6AE312467DE8700CBFC2B /* install_history.swift */,
+				72C6AE332467DF1F00CBFC2B /* chrome_downloads.swift */,
+				72C6AE352467DF4500CBFC2B /* emond_rules.swift */,
+				72C6AE372467DF6C00CBFC2B /* environment_variables.swift */,
+				72C6AE392467DF8400CBFC2B /* periodic_scripts.swift */,
+				72C6AE3B2467DFA600CBFC2B /* network_connections.swift */,
+				72C6AE3D2467DFD300CBFC2B /* event_taps.swift */,
+				72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -230,7 +268,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,16 +286,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				72C6AE402467DFF400CBFC2B /* shell_startup.swift in Sources */,
+				72C6AE282467D53D00CBFC2B /* bash_history.swift in Sources */,
 				OBJ_29 /* launch_agents.swift in Sources */,
 				OBJ_30 /* launch_daemons.swift in Sources */,
+				72C6AE2C2467DE5400CBFC2B /* safari_extensions.swift in Sources */,
+				72C6AE3A2467DF8400CBFC2B /* periodic_scripts.swift in Sources */,
 				72C6AE2024672D2100CBFC2B /* sip_status.swift in Sources */,
+				72C6AE302467DE7400CBFC2B /* firefox_extensions.swift in Sources */,
+				72C6AE2E2467DE6500CBFC2B /* chrome_extensions.swift in Sources */,
 				OBJ_31 /* system_info.swift in Sources */,
+				72C6AE322467DE8700CBFC2B /* install_history.swift in Sources */,
 				72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */,
 				OBJ_32 /* system_users.swift in Sources */,
+				72C6AE362467DF4500CBFC2B /* emond_rules.swift in Sources */,
 				OBJ_33 /* main.swift in Sources */,
+				72C6AE3C2467DFA600CBFC2B /* network_connections.swift in Sources */,
 				72C6AE242467340200CBFC2B /* cron_jobs.swift in Sources */,
 				OBJ_34 /* structs.swift in Sources */,
+				72C6AE3E2467DFD300CBFC2B /* event_taps.swift in Sources */,
+				72C6AE382467DF6C00CBFC2B /* environment_variables.swift in Sources */,
 				72C6AE26246737A100CBFC2B /* applications.swift in Sources */,
+				72C6AE342467DF1F00CBFC2B /* chrome_downloads.swift in Sources */,
+				72C6AE2A2467D82900CBFC2B /* login_items.swift in Sources */,
 				OBJ_35 /* utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
