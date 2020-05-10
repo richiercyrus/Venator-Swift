@@ -20,6 +20,7 @@ struct VenatorData: Encodable {
     var cron_jobs:Array<CronJob>?
     var bash_history:Array<BashHistory>?
     var network_connections:Array<NetworkConnection>?
+    var environment_variables:EnvironmentVariables?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -53,6 +54,12 @@ struct CronJob: Encodable {
     var uuid:String
     var user:String
     var crontab:String
+}
+
+struct EnvironmentVariables: Encodable {
+    var hostname:String
+    var uuid:String
+    var variables:[String: String]
 }
 
 struct SigningInfo: Encodable {

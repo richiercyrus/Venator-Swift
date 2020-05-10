@@ -81,11 +81,18 @@ if bash_history.count > 0 {
 //print(getApps(app_path: "/Applications/"))
 
 // get network connections
-//print("[+] Gathering network connection data")
-//let network_connections = getNetworkConections(system_info: system_info)
-//if network_connections.count > 0 {
-//    venator_data.network_connections = network_connections
-//}
+print("[+] Gathering network connection data")
+let network_connections = getNetworkConections(system_info: system_info)
+if network_connections.count > 0 {
+    venator_data.network_connections = network_connections
+}
+
+// get environment variables
+print("[+] Gathering environment variables data")
+let environment_variables = getEnvironmentVariables(system_info: system_info)
+if environment_variables.variables.count > 0 {
+    venator_data.environment_variables = environment_variables
+}
 
 // convert data to json
 print("[+] Converting collected data to final JSON")
