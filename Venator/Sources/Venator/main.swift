@@ -100,6 +100,12 @@ if applications.count > 0 {
     venator_data.applications = applications
 }
 
+print("[+] Gathering LoginItems")
+let loginItems = getLoginItems(path: "/Users/richiecyrus/Library/Application Support/com.apple.backgroundtaskmanagementagent/backgrounditems.btm", system_info: system_info)
+if loginItems.count > 0 {
+    venator_data.loginItems = loginItems
+}
+
 // convert data to json
 print("[+] Converting collected data to final JSON")
 let final_json = venator_data.toJson(data: venator_data)
