@@ -20,11 +20,9 @@ struct VenatorData: Encodable {
     var cron_jobs:Array<CronJob>?
     var bash_history:Array<BashHistory>?
     var network_connections:Array<NetworkConnection>?
-<<<<<<< HEAD
     var environment_variables:EnvironmentVariables?
-=======
     var applications:Array<Application>?
->>>>>>> a9b3f7ce67ac65bb9d94cf1f31f0a2503ce4c68a
+    var loginItems:Array<Application>?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
