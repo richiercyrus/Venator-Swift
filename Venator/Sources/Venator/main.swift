@@ -87,6 +87,12 @@ if bash_history.count > 0 {
 //    venator_data.network_connections = network_connections
 //}
 
+print("[+] Gathering Installed Applications")
+let applications = getApps(app_path: "/Applications/", system_info: system_info)
+if applications.count > 0 {
+    venator_data.applications = applications
+}
+
 // convert data to json
 print("[+] Converting collected data to final JSON")
 let final_json = venator_data.toJson(data: venator_data)

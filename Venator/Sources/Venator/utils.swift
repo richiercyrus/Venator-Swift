@@ -195,3 +195,25 @@ func getSigningStatus(file: NSURL) -> SigningInfo {
     signingInfo.authority = authorities
     return signingInfo
 }
+
+func parseApp(app_path: String, system_info:SystemInfo) -> Application {
+    let fileManager = FileManager.default
+    var appInfo = Application(hostname: system_info.hostname, uuid: system_info.uuid, appExecutable: "", appExecutablePath: "", appHash: "", appSigningInfo: SigningInfo(appleBinary: false, authority: [], status: ""))
+    let appPlist = app_path + "/Contents/Info.plist"
+    if fileManager.fileExists(atPath: appPlist) {
+        
+        
+        let app = NSDictionary(contentsOf: URL(fileURLWithPath: appPlist)) as! [String:Any]
+        
+        if (app["CFBundleExecutable"] != nil) {
+            appInfo.appExecutable = app["CFBundleExecutable"] as! String
+            appInfo.appExecutablePath = app_path + "/Contents/MacOS/" + appInfo.appExecutable
+            
+            if fileManager.fileExists(atPath: appInfo.appExecutablePath) {
+                appInfo.appSigningInfo = getSigningStatus(file: URL(fileURLWithPath: appInfo.appExecutablePath) as NSURL)
+                appInfo.appHash = getHash(url: URL(fileURLWithPath: appInfo.appExecutablePath))!
+            }
+        }
+    }
+    return appInfo
+}

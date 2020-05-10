@@ -20,6 +20,7 @@ struct VenatorData: Encodable {
     var cron_jobs:Array<CronJob>?
     var bash_history:Array<BashHistory>?
     var network_connections:Array<NetworkConnection>?
+    var applications:Array<Application>?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -94,4 +95,13 @@ struct User: Encodable {
     let uuid:String
     let username:String
     let isAdmin:Bool
+}
+
+struct Application: Encodable {
+    let hostname:String
+    let uuid:String
+    var appExecutable:String
+    var appExecutablePath:String
+    var appHash:String
+    var appSigningInfo:SigningInfo
 }
