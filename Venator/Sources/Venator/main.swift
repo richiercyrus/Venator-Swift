@@ -16,7 +16,7 @@ if !isAdmin() {
 
 // parse arguments
 
-print("[+] Gathering bash history data")
+printBanner()
 
 // create master struct
 var venator_data = VenatorData()
@@ -114,6 +114,13 @@ if install_history.count > 0 {
 print("[+] Gathering periodic scripts")
 let periodic_scripts = getPeriodicScripts(system_info: system_info)
 venator_data.periodic_scripts = periodic_scripts
+
+// get shell startup scripts
+print("[+] Gathering shell startup scripts data")
+let shell_startup_scripts = getShellStartupScripts(users: usernames, system_info: system_info)
+if shell_startup_scripts.count > 0 {
+    venator_data.shell_startup_scripts = shell_startup_scripts
+}
 
 // convert data to json
 print("[+] Converting collected data to final JSON")

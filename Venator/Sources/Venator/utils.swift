@@ -217,3 +217,15 @@ func parseApp(app_path: String, system_info:SystemInfo) -> Application {
     }
     return appInfo
 }
+
+func printBanner() {
+    let banner = """
+    __     __               _
+    \\ \\   / /__ _ __   __ _| |_ ___  _ __
+     \\ \\ / / _ \\ '_ \\ / _` | __/ _ \\| '__|
+      \\ V /  __/ | | | (_| | || (_) | |
+       \\_/ \\___|_| |_|\\__,_|\\__\\___/|_|
+
+"""
+    print(banner)
+}

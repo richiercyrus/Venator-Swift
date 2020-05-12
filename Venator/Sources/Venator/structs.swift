@@ -25,6 +25,7 @@ struct VenatorData: Encodable {
     var login_items:Array<Application>?
     var install_history:Array<InstallHistory>?
     var periodic_scripts:PeriodicScripts?
+    var shell_startup_scripts:Array<ShellStartupScript>?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -131,4 +132,12 @@ struct PeriodicScripts: Encodable {
     var daily:Array<String>?
     var weekly:Array<String>?
     var monthly:Array<String>?
+}
+
+struct ShellStartupScript: Encodable {
+    var hostname:String
+    var uuid:String
+    var user:String
+    var shell_startup_filename:String
+    var shell_startup_data:String
 }
