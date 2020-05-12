@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		725BB486246A54C5002151D6 /* virus_total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725BB485246A54C5002151D6 /* virus_total.swift */; };
 		72C6AE2024672D2100CBFC2B /* sip_status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE1F24672D2100CBFC2B /* sip_status.swift */; };
 		72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE212467313E00CBFC2B /* gatekeeper.swift */; };
 		72C6AE242467340200CBFC2B /* cron_jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE232467340200CBFC2B /* cron_jobs.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		725BB485246A54C5002151D6 /* virus_total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = virus_total.swift; sourceTree = "<group>"; };
 		72C6AE1F24672D2100CBFC2B /* sip_status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sip_status.swift; sourceTree = "<group>"; };
 		72C6AE212467313E00CBFC2B /* gatekeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gatekeeper.swift; sourceTree = "<group>"; };
 		72C6AE232467340200CBFC2B /* cron_jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cron_jobs.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				OBJ_14 /* main.swift */,
 				OBJ_15 /* structs.swift */,
 				OBJ_16 /* utils.swift */,
+				725BB485246A54C5002151D6 /* virus_total.swift */,
 			);
 			name = Venator;
 			path = Sources/Venator;
@@ -304,6 +307,7 @@
 				72C6AE3C2467DFA600CBFC2B /* network_connections.swift in Sources */,
 				72C6AE242467340200CBFC2B /* cron_jobs.swift in Sources */,
 				OBJ_34 /* structs.swift in Sources */,
+				725BB486246A54C5002151D6 /* virus_total.swift in Sources */,
 				72C6AE3E2467DFD300CBFC2B /* event_taps.swift in Sources */,
 				72C6AE382467DF6C00CBFC2B /* environment_variables.swift in Sources */,
 				72C6AE26246737A100CBFC2B /* applications.swift in Sources */,

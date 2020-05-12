@@ -9,6 +9,10 @@
 import Foundation
 import CommonCrypto
 
+let max_attempts = 4
+var attempts = 0
+let apikey = "5fdc8b8e20a5ba7427e86e1699c784927e2d5a9b1146a9cbf201c2b7d71df127"
+
 func isAdmin() -> Bool {
     if #available(OSX 10.12, *) {
         if ProcessInfo.processInfo.fullUserName == "System Administrator" || ProcessInfo.processInfo.fullUserName == "root" {

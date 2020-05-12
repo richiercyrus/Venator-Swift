@@ -122,6 +122,10 @@ if shell_startup_scripts.count > 0 {
     venator_data.shell_startup_scripts = shell_startup_scripts
 }
 
+// test virus total query
+//let test = getVTResult(hash: "52d3df0ed60c46f336c131bf2ca454f73bafdc4b04dfa2aea80746f5ba9e6d")
+//print(test)
+
 // convert data to json
 print("[+] Converting collected data to final JSON")
 let final_json = venator_data.toJson(data: venator_data)
