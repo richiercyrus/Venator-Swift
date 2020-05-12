@@ -27,7 +27,7 @@ func getLoginItems(users: Array<String>, system_info: SystemInfo) -> Array<Appli
         for object in objects! {
             if object is NSData {
                 let bookmark = object as! Data
-                var properties = NSURL.resourceValues(forKeys: [URLResourceKey(rawValue: "NSURLBookmarkAllPropertiesKey")], fromBookmarkData: bookmark)! as NSDictionary
+                let properties = NSURL.resourceValues(forKeys: [URLResourceKey(rawValue: "NSURLBookmarkAllPropertiesKey")], fromBookmarkData: bookmark)! as NSDictionary
                 loginApps.append(((properties["NSURLBookmarkAllPropertiesKey"] as! NSDictionary)["_NSURLPathKey"]) as! String)
                 //print((properties["NSURLBookmarkAllPropertiesKey"] as! NSDictionary)["_NSURLPathKey"])
             }
@@ -35,7 +35,7 @@ func getLoginItems(users: Array<String>, system_info: SystemInfo) -> Array<Appli
                 let item = object as! NSDictionary
                 if item["NS.data"] != nil {
                     let bookmark = item["NS.data"] as! Data
-                    var properties = NSURL.resourceValues(forKeys: [URLResourceKey(rawValue: "NSURLBookmarkAllPropertiesKey")], fromBookmarkData: bookmark)! as NSDictionary
+                    let properties = NSURL.resourceValues(forKeys: [URLResourceKey(rawValue: "NSURLBookmarkAllPropertiesKey")], fromBookmarkData: bookmark)! as NSDictionary
                     loginApps.append(((properties["NSURLBookmarkAllPropertiesKey"] as! NSDictionary)["_NSURLPathKey"]) as! String)
                 }
             }

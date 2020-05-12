@@ -104,11 +104,16 @@ if login_items.count > 0 {
 }
 
 // get install history
-print("[+] Gathering install history")
+print("[+] Gathering install history data")
 let install_history = getInstallHistory(withName: "/Library/Receipts/InstallHistory.plist")
 if install_history.count > 0 {
     venator_data.install_history = install_history
 }
+
+// get periodic scripts
+print("[+] Gathering periodic scripts")
+let periodic_scripts = getPeriodicScripts(system_info: system_info)
+venator_data.periodic_scripts = periodic_scripts
 
 // convert data to json
 print("[+] Converting collected data to final JSON")
