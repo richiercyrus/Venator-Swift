@@ -13,6 +13,7 @@ func getVTResult(hash: String) -> String {
         // sleep for 60 seconds after 4 attempts to keep under the api quota
         if attempts == 4 {
             sleep(60)
+            attempts = 0
         }
         do {
             let data = try get(key: apikey, hash: hash)
