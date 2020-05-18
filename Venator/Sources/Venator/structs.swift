@@ -26,6 +26,7 @@ struct VenatorData: Encodable {
     var install_history:Array<InstallHistory>?
     var periodic_scripts:PeriodicScripts?
     var shell_startup_scripts:Array<ShellStartupScript>?
+    var firefox_extensions:Array<FireFoxExtension>?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -140,4 +141,20 @@ struct ShellStartupScript: Encodable {
     var user:String
     var shell_startup_filename:String
     var shell_startup_data:String
+}
+
+struct FireFoxExtension: Encodable {
+    var hostname:String
+    var uuid:String
+    var user:String
+    var extension_id:String?
+    var extension_update_url:String?
+    var extension_options_url:String?
+    var extension_install_date:String?
+    var extension_last_updated:String?
+    var extension_source_uri:String?
+    var extension_name:String?
+    var extension_description:String?
+    var extension_creator:String?
+    var extension_homepage_url:String?
 }

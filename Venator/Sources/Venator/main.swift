@@ -122,6 +122,13 @@ if shell_startup_scripts.count > 0 {
     venator_data.shell_startup_scripts = shell_startup_scripts
 }
 
+// get firefox extensions
+print("[+] Gathering Firefox extensions data")
+let firefox_extensions = getFirefoxExtensions(users: usernames, system_info: system_info)
+if firefox_extensions.count > 0 {
+    venator_data.firefox_extensions = firefox_extensions
+}
+
 // test virus total query
 //let test = getVTResult(hash: "52d3df0ed60c46f336c131bf2ca454f73bafdc4b04dfa2aea80746f5ba9e6d")
 //print(test)
