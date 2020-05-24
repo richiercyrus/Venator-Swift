@@ -7,7 +7,17 @@
 
 import Foundation
 
-func getInstallHistory(withName name: String) -> Array<InstallHistory> {
+func runInstallHistory(system_info: SystemInfo) {
+    // get install history
+    print("[+] Gathering install history data")
+    let install_history = getInstallHistory(withName: "/Library/Receipts/InstallHistory.plist",
+                                            system_info: system_info)
+    if install_history.count > 0 {
+        config.venator_data.install_history = install_history
+    }
+}
+
+func getInstallHistory(withName name: String, system_info: SystemInfo) -> Array<InstallHistory> {
     var install_history = Array<InstallHistory>()
     let xml = FileManager.default.contents(atPath: name)
     let data = try! PropertyListSerialization.propertyList(from: xml!, options: [], format: nil) as! Array<[String: Any]>

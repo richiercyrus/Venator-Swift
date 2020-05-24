@@ -8,6 +8,13 @@
 
 import Foundation
 
+func runSystemInfo() {
+    // get system info
+    print("[+] Gathering system data")
+    let system_info = getSystemInfo()
+    config.venator_data.system_info = system_info
+}
+
 // Get the full system info for a given system like version number, hostname, kernel etc.
 func getSystemInfo() -> SystemInfo {
     //using process info to get the operating system version as a string

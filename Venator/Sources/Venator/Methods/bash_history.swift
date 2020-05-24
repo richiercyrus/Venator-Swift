@@ -7,6 +7,16 @@
 
 import Foundation
 
+func runBashHistory(usernames: Array<String>, system_info: SystemInfo) {
+    // get bash history
+    print("[+] Gathering bash history data")
+    let bash_history = getBashHistory(users: usernames,
+                                      system_info: system_info)
+    if bash_history.count > 0 {
+        config.venator_data.bash_history = bash_history
+    }
+}
+
 func getBashHistory(users: Array<String>, system_info: SystemInfo) -> Array<BashHistory>{
     var bash_history = Array<BashHistory>()
     for i in users {

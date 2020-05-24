@@ -7,6 +7,16 @@
 
 import Foundation
 
+func runFireFoxExtensions(usernames: Array<String>, system_info: SystemInfo) {
+    // get firefox extensions
+    print("[+] Gathering Firefox extensions data")
+    let firefox_extensions = getFirefoxExtensions(users: usernames,
+                                                  system_info: system_info)
+    if firefox_extensions.count > 0 {
+        config.venator_data.firefox_extensions = firefox_extensions
+    }
+}
+
 func getFirefoxExtensions(users: Array<String>, system_info: SystemInfo) -> Array<FireFoxExtension> {
     var firefox_extensions = Array<FireFoxExtension>()
     for user in users {

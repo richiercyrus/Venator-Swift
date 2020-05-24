@@ -7,6 +7,15 @@
 
 import Foundation
 
+func runNetworkConnections(system_info: SystemInfo) {
+    // get network connections
+    print("[+] Gathering network connection data")
+    let network_connections = getNetworkConections(system_info: system_info)
+    if network_connections.count > 0 {
+        config.venator_data.network_connections = network_connections
+    }
+}
+
 func getNetworkConections(system_info: SystemInfo) -> Array<NetworkConnection> {
     var network_connections = Array<NetworkConnection>()
     // Set the task parameters

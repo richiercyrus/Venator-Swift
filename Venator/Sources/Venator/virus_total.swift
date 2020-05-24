@@ -11,12 +11,12 @@ func getVTResult(hash: String) -> String {
     var result = ""
     while result == "" {
         // sleep for 60 seconds after 4 attempts to keep under the api quota
-        if attempts == 4 {
+        if config.attempts == 4 {
             sleep(60)
-            attempts = 0
+            config.attempts = 0
         }
         do {
-            let data = try get(key: apikey, hash: hash)
+            let data = try get(key: config.vt_key!, hash: hash)
             if data["response_code"] as! Int? == 0 {
                 result = "This file has no VirusTotal entry"
             }
@@ -28,10 +28,10 @@ func getVTResult(hash: String) -> String {
                     result = "This file is OK"
                 }
             }
-            attempts += 1
+            config.attempts += 1
         }
         catch {
-            attempts += 1
+            config.attempts += 1
         }
     }
     return result

@@ -7,6 +7,14 @@
 
 import Foundation
 
+func runLoginItems(usernames: Array<String>, system_info: SystemInfo) {
+    print("[+] Gathering LoginItems")
+    let login_items = getLoginItems(users: usernames, system_info: system_info)
+    if login_items.count > 0 {
+        config.venator_data.login_items = login_items
+    }
+}
+
 //get login items - this will be a doozy
 func getLoginItems(users: Array<String>, system_info: SystemInfo) -> Array<Application> {
     var loginApps:[String] = []

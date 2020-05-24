@@ -9,6 +9,20 @@
 import Foundation
 import Collaboration
 
+func runSystemUsers(system_info: SystemInfo) {
+    //get user info
+    print("[+] Gathering user data")
+    let users = getSystemUsers(system_info: system_info)
+    // check to see if there is more than one user before assigning to struct
+    if users.count > 0 {
+        config.venator_data.users = users
+        // collect usernames
+        for i in users {
+            config.usernames.append(i.username)
+        }
+    }
+}
+
 func getSystemUsers(system_info:SystemInfo) -> Array<User>{
     
     var systemUsers = Array<User>()

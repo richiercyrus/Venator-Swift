@@ -8,6 +8,16 @@
 
 import Foundation
 
+func runLaunchDaemons(system_info: SystemInfo) {
+    // gather launch daemons
+    print("[+] Gathering Launch Daemons data")
+    let launch_daemons = getLaunchDaemons(path: "/Library/LaunchDaemons/",
+                                          system_info: system_info)
+    if launch_daemons.count > 0 {
+        config.venator_data.launch_daemons = launch_daemons
+    }
+}
+
 func getLaunchDaemons(path: String, system_info: SystemInfo) -> Array<LaunchItem> {
     
     var parsedDaemons = Array<LaunchItem>()

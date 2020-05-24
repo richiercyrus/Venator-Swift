@@ -8,6 +8,16 @@
 
 import Foundation
 
+func runLaunchAgents(system_info: SystemInfo) {
+    // gather launch agents
+    print("[+] Gathering Launch Agents data")
+    let launch_agents = getLaunchAgents(path: "/Library/LaunchAgents/",
+                                        system_info: system_info)
+    if launch_agents.count > 0 {
+        config.venator_data.launch_agents = launch_agents
+    }
+}
+
 func getLaunchAgents(path: String, system_info: SystemInfo) -> Array<LaunchItem> {
     
     var parsedAgents = Array<LaunchItem>()

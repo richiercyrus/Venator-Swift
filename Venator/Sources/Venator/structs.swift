@@ -8,6 +8,21 @@
 
 import Foundation
 
+struct VenatorConfig {
+    var venator_data:VenatorData
+    var modules:Array<String>
+    var usernames:Array<String>
+    var attempts:Int
+    let checkVT:Bool
+    let upload:Bool
+    let vt_key:String?
+    let filename:String?
+    let aws_bucket:String?
+    let aws_id:String?
+    let aws_secret:String?
+    let aws_region:String?
+}
+
 struct VenatorData: Encodable {
     //let begin_collection:String
     //var finish_collection:String?

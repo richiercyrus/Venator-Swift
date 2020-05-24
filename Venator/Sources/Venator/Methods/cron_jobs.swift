@@ -7,6 +7,16 @@
 
 import Foundation
 
+func runCronjobs(usernames: Array<String>, system_info: SystemInfo) {
+    // get cron jobs
+    print("[+] Gathering cron job data")
+    let cron_jobs = getCronJobs(users: usernames,
+                                system_info: system_info)
+    if cron_jobs.count > 0 {
+        config.venator_data.cron_jobs = cron_jobs
+    }
+}
+
 //get all cron jobs - "crontab","-u",user,"-l"
 func getCronJobs(users: Array<String>, system_info: SystemInfo) -> Array<CronJob> {
     var cron_jobs = Array<CronJob>()

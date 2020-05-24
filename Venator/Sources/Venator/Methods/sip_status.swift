@@ -7,6 +7,13 @@
 
 import Foundation
 
+func runSIPStatus(system_info: SystemInfo) {
+     // gather sip info
+     print("[+] Gathering SIP data")
+     let sip = getSIPStatus(system_info: system_info)
+    config.venator_data.system_integrity_protection = sip
+}
+
 func getSIPStatus(system_info: SystemInfo) -> SIP {
     let task = Process()
     task.launchPath = "/usr/bin/csrutil"

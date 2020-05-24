@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		725BB486246A54C5002151D6 /* virus_total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725BB485246A54C5002151D6 /* virus_total.swift */; };
+		725F4BF4247A20A60064C407 /* dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F4BF3247A20A60064C407 /* dispatcher.swift */; };
+		725F4BF7247A44620064C407 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 725F4BF6247A44620064C407 /* ArgumentParser */; };
 		72C6AE2024672D2100CBFC2B /* sip_status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE1F24672D2100CBFC2B /* sip_status.swift */; };
 		72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE212467313E00CBFC2B /* gatekeeper.swift */; };
 		72C6AE242467340200CBFC2B /* cron_jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE232467340200CBFC2B /* cron_jobs.swift */; };
@@ -70,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		725BB485246A54C5002151D6 /* virus_total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = virus_total.swift; sourceTree = "<group>"; };
+		725F4BF3247A20A60064C407 /* dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dispatcher.swift; sourceTree = "<group>"; };
 		72C6AE1F24672D2100CBFC2B /* sip_status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sip_status.swift; sourceTree = "<group>"; };
 		72C6AE212467313E00CBFC2B /* gatekeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gatekeeper.swift; sourceTree = "<group>"; };
 		72C6AE232467340200CBFC2B /* cron_jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cron_jobs.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				725F4BF7247A44620064C407 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +176,7 @@
 				OBJ_15 /* structs.swift */,
 				OBJ_16 /* utils.swift */,
 				725BB485246A54C5002151D6 /* virus_total.swift */,
+				725F4BF3247A20A60064C407 /* dispatcher.swift */,
 			);
 			name = Venator;
 			path = Sources/Venator;
@@ -234,6 +239,9 @@
 			dependencies = (
 			);
 			name = Venator;
+			packageProductDependencies = (
+				725F4BF6247A44620064C407 /* ArgumentParser */,
+			);
 			productName = Venator;
 			productReference = "Venator::Venator::Product" /* Venator */;
 			productType = "com.apple.product-type.tool";
@@ -272,6 +280,9 @@
 				en,
 			);
 			mainGroup = OBJ_5;
+			packageReferences = (
+				725F4BF5247A44620064C407 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = OBJ_21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,6 +312,7 @@
 				OBJ_31 /* system_info.swift in Sources */,
 				72C6AE322467DE8700CBFC2B /* install_history.swift in Sources */,
 				72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */,
+				725F4BF4247A20A60064C407 /* dispatcher.swift in Sources */,
 				OBJ_32 /* system_users.swift in Sources */,
 				72C6AE362467DF4500CBFC2B /* emond_rules.swift in Sources */,
 				OBJ_33 /* main.swift in Sources */,
@@ -360,7 +372,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Venator.xcodeproj/Venator_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@executable_path",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -385,7 +401,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Venator.xcodeproj/Venator_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@executable_path",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -455,7 +475,8 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -493,7 +514,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Venator.xcodeproj/VenatorTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -518,7 +543,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Venator.xcodeproj/VenatorTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -580,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		725F4BF5247A44620064C407 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		725F4BF6247A44620064C407 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 725F4BF5247A44620064C407 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }

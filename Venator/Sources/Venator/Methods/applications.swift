@@ -7,6 +7,15 @@
 
 import Foundation
 
+func runApps(system_info: SystemInfo) {
+    print("[+] Gathering Installed Applications")
+    let applications = getApps(app_path: "/Applications/",
+                               system_info: system_info)
+    if applications.count > 0 {
+        config.venator_data.applications = applications
+    }
+}
+
 //get applications - /Contents/Info.plist
 func getApps(app_path: String, system_info: SystemInfo)-> Array<Application> {
     

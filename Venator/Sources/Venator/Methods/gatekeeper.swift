@@ -7,6 +7,13 @@
 
 import Foundation
 
+func runGatekeeperStatus(system_info: SystemInfo) {
+    // get gatekeeper status
+    print("[+] Gathering GateKeeper data")
+    let gatekeeper = getGatekeeperStatus(system_info: system_info)
+    config.venator_data.gatekeeper = gatekeeper
+}
+
 // gatekeeper status - have to use spctl --status
 func getGatekeeperStatus(system_info: SystemInfo) -> GateKeeper {
     let task = Process()

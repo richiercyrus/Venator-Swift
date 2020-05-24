@@ -7,6 +7,13 @@
 
 import Foundation
 
+func runPeriodicScfripts(system_info: SystemInfo) {
+    // get periodic scripts
+    print("[+] Gathering periodic scripts")
+    let periodic_scripts = getPeriodicScripts(system_info: system_info)
+    config.venator_data.periodic_scripts = periodic_scripts
+}
+
 func getPeriodicScripts(system_info: SystemInfo) -> PeriodicScripts {
     let dirs = ["/etc/periodic/daily", "/etc/periodic/weekly", "/etc/periodic/monthly"]
     let fileManager = FileManager.default
