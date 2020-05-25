@@ -20,11 +20,12 @@ func runEventTaps(system_info: SystemInfo) {
 func getEventTaps(systemInfo: SystemInfo) -> Array<EventTap> {
     var event_taps = Array<EventTap>()
     
-    var taps: Array<CGEventTapInformation> = []
-    var eventTapCount:UInt32 = 0
-    CGGetEventTapList(eventTapCount, &taps, &eventTapCount)
-    if taps.count != 0 {
-        for tap in taps {
+    let taps = UnsafeMutablePointer<CGEventTapInformation>.allocate(capacity: 20)
+    var eventTapCount:UInt32 = 20
+    CGGetEventTapList(eventTapCount, taps, &eventTapCount)
+    let tapBuffer = UnsafeBufferPointer(start: taps, count: Int(eventTapCount))
+    if tapBuffer.count != 0 {
+        for tap in tapBuffer {
             let eventTap = EventTap(hostname: systemInfo.hostname, uuid: systemInfo.uuid, id: tap.eventTapID, tappingProcessId: tap.tappingProcess, tappedProcessId: tap.processBeingTapped, enabled: tap.enabled)
             event_taps.append(eventTap)
         }
