@@ -39,6 +39,7 @@ func fullCollection() {
     runNetworkConnections(system_info: config.venator_data.system_info!)
     runShellStartupScripts(usernames: config.usernames,
                            system_info: config.venator_data.system_info!)
+    runEventTaps(system_info: config.venator_data.system_info!)
     
     let final_json = getFinalJson()
     
