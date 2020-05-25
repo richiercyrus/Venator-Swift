@@ -10,7 +10,6 @@ import CoreGraphics
 import Quartz
 
 func runEventTaps(system_info: SystemInfo) {
-    // get firefox extensions
     print("[+] Gathering Event Taps data")
     let eventTaps = getEventTaps(systemInfo: system_info)
     if eventTaps.count > 0 {
