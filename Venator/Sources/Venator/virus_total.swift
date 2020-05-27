@@ -37,11 +37,10 @@ func getVTResult(hash: String) -> String {
     return result
 }
 
-// Define group to send results through DispathQueue
-let group = DispatchGroup()
-
 // Generic GET function
 func get(key: String, hash: String) throws -> [String: Any] {
+    // Define group to send results through DispathQueue
+    let group = DispatchGroup()
     group.enter()
     var results = [String: Any]()
     var getURLComponents = URLComponents()
@@ -70,15 +69,4 @@ func get(key: String, hash: String) throws -> [String: Any] {
     task.resume()
     group.wait()
     return results
-}
-
-func convertToDictionary(text: String) -> [String: Any]? {
-    if let data = text.data(using: .utf8) {
-        do {
-            return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    return nil
 }

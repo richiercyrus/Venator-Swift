@@ -21,9 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		7257705D247E26FA000E61AA /* kernel_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257705C247E26FA000E61AA /* kernel_extensions.swift */; };
 		725BB486246A54C5002151D6 /* virus_total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725BB485246A54C5002151D6 /* virus_total.swift */; };
 		725F4BF4247A20A60064C407 /* dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F4BF3247A20A60064C407 /* dispatcher.swift */; };
 		725F4BF7247A44620064C407 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 725F4BF6247A44620064C407 /* ArgumentParser */; };
+		725F4BF9247AE1E40064C407 /* s3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F4BF8247AE1E40064C407 /* s3.swift */; };
 		72C6AE2024672D2100CBFC2B /* sip_status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE1F24672D2100CBFC2B /* sip_status.swift */; };
 		72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE212467313E00CBFC2B /* gatekeeper.swift */; };
 		72C6AE242467340200CBFC2B /* cron_jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE232467340200CBFC2B /* cron_jobs.swift */; };
@@ -71,8 +73,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7257705C247E26FA000E61AA /* kernel_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kernel_extensions.swift; sourceTree = "<group>"; };
 		725BB485246A54C5002151D6 /* virus_total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = virus_total.swift; sourceTree = "<group>"; };
 		725F4BF3247A20A60064C407 /* dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dispatcher.swift; sourceTree = "<group>"; };
+		725F4BF8247AE1E40064C407 /* s3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s3.swift; sourceTree = "<group>"; };
 		72C6AE1F24672D2100CBFC2B /* sip_status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sip_status.swift; sourceTree = "<group>"; };
 		72C6AE212467313E00CBFC2B /* gatekeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gatekeeper.swift; sourceTree = "<group>"; };
 		72C6AE232467340200CBFC2B /* cron_jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cron_jobs.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				OBJ_16 /* utils.swift */,
 				725BB485246A54C5002151D6 /* virus_total.swift */,
 				725F4BF3247A20A60064C407 /* dispatcher.swift */,
+				725F4BF8247AE1E40064C407 /* s3.swift */,
 			);
 			name = Venator;
 			path = Sources/Venator;
@@ -206,6 +211,7 @@
 				72C6AE3B2467DFA600CBFC2B /* network_connections.swift */,
 				72C6AE3D2467DFD300CBFC2B /* event_taps.swift */,
 				72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */,
+				7257705C247E26FA000E61AA /* kernel_extensions.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				72C6AE302467DE7400CBFC2B /* firefox_extensions.swift in Sources */,
 				72C6AE2E2467DE6500CBFC2B /* chrome_extensions.swift in Sources */,
 				OBJ_31 /* system_info.swift in Sources */,
+				7257705D247E26FA000E61AA /* kernel_extensions.swift in Sources */,
 				72C6AE322467DE8700CBFC2B /* install_history.swift in Sources */,
 				72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */,
 				725F4BF4247A20A60064C407 /* dispatcher.swift in Sources */,
@@ -322,6 +329,7 @@
 				725BB486246A54C5002151D6 /* virus_total.swift in Sources */,
 				72C6AE3E2467DFD300CBFC2B /* event_taps.swift in Sources */,
 				72C6AE382467DF6C00CBFC2B /* environment_variables.swift in Sources */,
+				725F4BF9247AE1E40064C407 /* s3.swift in Sources */,
 				72C6AE26246737A100CBFC2B /* applications.swift in Sources */,
 				72C6AE342467DF1F00CBFC2B /* chrome_downloads.swift in Sources */,
 				72C6AE2A2467D82900CBFC2B /* login_items.swift in Sources */,

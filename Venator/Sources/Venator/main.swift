@@ -10,6 +10,8 @@ import Foundation
 import ArgumentParser
 
 struct Venator: ParsableCommand {
+    static let configuration = CommandConfiguration(abstract: "Data collection utility for proactive macOS detection")
+    
     @Option(name: .shortAndLong, help: "File path to output file")
     var out: String?
     

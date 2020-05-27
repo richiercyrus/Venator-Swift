@@ -40,6 +40,7 @@ func fullCollection() {
     runShellStartupScripts(usernames: config.usernames,
                            system_info: config.venator_data.system_info!)
     runEventTaps(system_info: config.venator_data.system_info!)
+    runKernelExtensions(system_info: config.venator_data.system_info!)
     
     let final_json = getFinalJson()
     
@@ -96,6 +97,8 @@ func moduleCollection() {
             case "startupscripts":
                 runShellStartupScripts(usernames: config.usernames,
                                        system_info: config.venator_data.system_info!)
+            case "kext":
+                runKernelExtensions(system_info: config.venator_data.system_info!)
             default:
                 print("[!] Module \(module) does not exist")
         }

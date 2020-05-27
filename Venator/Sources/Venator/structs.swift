@@ -43,6 +43,7 @@ struct VenatorData: Encodable {
     var shell_startup_scripts:Array<ShellStartupScript>?
     var firefox_extensions:Array<FireFoxExtension>?
     var event_taps:Array<EventTap>?
+    var kernel_extensions:Array<KernelExtension>?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -182,4 +183,17 @@ struct EventTap: Encodable {
     var tappingProcessId:Int32
     var tappedProcessId:Int32
     var enabled:Bool
+}
+
+struct KernelExtension: Encodable {
+    var hostname:String
+    var uuid:String
+    var CFBundleName:String?
+    var CFBundleExecutable:String?
+    var CFBundleExecutable_signature:String?
+    var CFBundleExecutable_hash:String?
+    var virustotal_result:String?
+    var CFBundleIdentifier:String?
+    var OSBundleRequired:String?
+    var CFBundleGetInfoString:String?
 }
