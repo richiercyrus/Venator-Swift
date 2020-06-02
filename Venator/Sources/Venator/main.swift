@@ -9,6 +9,7 @@
 import Foundation
 import ArgumentParser
 
+@available(OSX 10.11, *)
 struct Venator: ParsableCommand {
     static let configuration = CommandConfiguration(abstract: "Data collection utility for proactive macOS detection")
     
@@ -84,4 +85,8 @@ var config: VenatorConfig
 checkRoot()
 
 // execute Veantor
-Venator.main()
+if #available(OSX 10.11, *) {
+    Venator.main()
+} else {
+    // Fallback on earlier versions
+}

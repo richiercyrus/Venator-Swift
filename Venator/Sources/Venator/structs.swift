@@ -42,6 +42,7 @@ struct VenatorData: Encodable {
     var periodic_scripts:PeriodicScripts?
     var shell_startup_scripts:Array<ShellStartupScript>?
     var firefox_extensions:Array<FireFoxExtension>?
+    var chrome_extensions:Array<ChromeExtension>?
     var event_taps:Array<EventTap>?
     var kernel_extensions:Array<KernelExtension>?
     
@@ -174,6 +175,16 @@ struct FireFoxExtension: Encodable {
     var extension_description:String?
     var extension_creator:String?
     var extension_homepage_url:String?
+}
+
+struct ChromeExtension: Encodable {
+    var hostname:String
+    var uuid:String
+    var user:String
+    var extension_id:String?
+    var extension_name:String?
+    var extension_update_url:String?
+    var extension_description:String?
 }
 
 struct EventTap: Encodable {

@@ -7,6 +7,7 @@
 
 import Foundation
 
+@available(OSX 10.11, *)
 func dispatchVenator() {
     if config.modules.count < 1 {
         fullCollection()
@@ -16,6 +17,7 @@ func dispatchVenator() {
     }
 }
 
+@available(OSX 10.11, *)
 func fullCollection() {
     // collect data
     runSystemInfo()
@@ -33,6 +35,7 @@ func fullCollection() {
                   system_info: config.venator_data.system_info!)
     runFireFoxExtensions(usernames: config.usernames,
                          system_info: config.venator_data.system_info!)
+    runChromeExtensions(usernames: config.usernames, system_info: config.venator_data.system_info!)
     runInstallHistory(system_info: config.venator_data.system_info!)
     runEnvironemntVariables(system_info: config.venator_data.system_info!)
     runPeriodicScfripts(system_info: config.venator_data.system_info!)
@@ -58,6 +61,7 @@ func fullCollection() {
     }
 }
 
+@available(OSX 10.11, *)
 func moduleCollection() {
     // collect data
     runSystemInfo()
@@ -86,6 +90,9 @@ func moduleCollection() {
             case "firefox":
                 runFireFoxExtensions(usernames: config.usernames,
                                system_info: config.venator_data.system_info!)
+            case "chromeExtension":
+                runChromeExtensions(usernames: config.usernames,
+                                    system_info: config.venator_data.system_info!)
             case "installhistory":
                 runInstallHistory(system_info: config.venator_data.system_info!)
             case "envvariables":
