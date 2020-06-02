@@ -32,7 +32,6 @@
 		72C6AE26246737A100CBFC2B /* applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE25246737A100CBFC2B /* applications.swift */; };
 		72C6AE282467D53D00CBFC2B /* bash_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE272467D53D00CBFC2B /* bash_history.swift */; };
 		72C6AE2A2467D82900CBFC2B /* login_items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE292467D82900CBFC2B /* login_items.swift */; };
-		72C6AE2C2467DE5400CBFC2B /* safari_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE2B2467DE5400CBFC2B /* safari_extensions.swift */; };
 		72C6AE2E2467DE6500CBFC2B /* chrome_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */; };
 		72C6AE302467DE7400CBFC2B /* firefox_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */; };
 		72C6AE322467DE8700CBFC2B /* install_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE312467DE8700CBFC2B /* install_history.swift */; };
@@ -83,7 +82,6 @@
 		72C6AE25246737A100CBFC2B /* applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = applications.swift; sourceTree = "<group>"; };
 		72C6AE272467D53D00CBFC2B /* bash_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bash_history.swift; sourceTree = "<group>"; };
 		72C6AE292467D82900CBFC2B /* login_items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_items.swift; sourceTree = "<group>"; };
-		72C6AE2B2467DE5400CBFC2B /* safari_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = safari_extensions.swift; sourceTree = "<group>"; };
 		72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chrome_extensions.swift; sourceTree = "<group>"; };
 		72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firefox_extensions.swift; sourceTree = "<group>"; };
 		72C6AE312467DE8700CBFC2B /* install_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = install_history.swift; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 				72C6AE25246737A100CBFC2B /* applications.swift */,
 				72C6AE272467D53D00CBFC2B /* bash_history.swift */,
 				72C6AE292467D82900CBFC2B /* login_items.swift */,
-				72C6AE2B2467DE5400CBFC2B /* safari_extensions.swift */,
 				72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */,
 				72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */,
 				72C6AE312467DE8700CBFC2B /* install_history.swift */,
@@ -310,7 +307,6 @@
 				72C6AE282467D53D00CBFC2B /* bash_history.swift in Sources */,
 				OBJ_29 /* launch_agents.swift in Sources */,
 				OBJ_30 /* launch_daemons.swift in Sources */,
-				72C6AE2C2467DE5400CBFC2B /* safari_extensions.swift in Sources */,
 				72C6AE3A2467DF8400CBFC2B /* periodic_scripts.swift in Sources */,
 				72C6AE2024672D2100CBFC2B /* sip_status.swift in Sources */,
 				72C6AE302467DE7400CBFC2B /* firefox_extensions.swift in Sources */,
