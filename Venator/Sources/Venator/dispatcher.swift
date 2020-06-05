@@ -48,6 +48,16 @@ func fullCollection() {
     let final_json = getFinalJson()
     
     if config.upload {
+        do {
+            if #available(OSX 10.13, *) {
+                try postS3(venator_data: final_json)
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+        catch {
+            print("UnableToUpload")
+        }
         
     }
     else {
