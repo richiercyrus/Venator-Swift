@@ -132,7 +132,6 @@ func postS3(venator_data: String) throws -> [String: Any] {
     //print(getURL)
     //var request = URLRequest(url: getURL)
     var request = URLRequest(url: s3_upload_url!)
-    print(request.url!)
     request.httpMethod = "PUT"
     request.httpBody = venator_data.data(using: String.Encoding.utf8)
     
