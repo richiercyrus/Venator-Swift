@@ -168,7 +168,7 @@ func postS3(venator_data: String) throws -> [String: Any] {
         } else if
             let _ = data,
             let response = response as? HTTPURLResponse, response.statusCode == 200 {
-    
+            
             }
     group.leave()
     }

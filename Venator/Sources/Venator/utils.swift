@@ -174,27 +174,31 @@ func getSigningStatus(file: NSURL) -> SigningInfo {
         let key = kSecCodeInfoCertificates
         let information_dict = information! as NSDictionary
         let certChain = information_dict[key]
-        let certChain_array = certChain as! Array<Any>
-        let certChain_count = certChain_array.count
-        var certName: CFString? = nil
-        
-        for index in 0..<certChain_count {
-            let cert = certChain_array[index]
-            let result = SecCertificateCopyCommonName(cert as! SecCertificate, &certName)
-            if errSecSuccess != result {
-                continue
+        if certChain != nil {
+            let certChain_array = certChain as! Array<Any>
+            let certChain_count = certChain_array.count
+            var certName: CFString? = nil
+            
+            for index in 0..<certChain_count {
+                let cert = certChain_array[index]
+                let result = SecCertificateCopyCommonName(cert as! SecCertificate, &certName)
+                if errSecSuccess != result {
+                    continue
+                }
+                authorities.append(certName! as String)
             }
-            authorities.append(certName! as String)
         }
     }
     if signedStatus == 0 {
         signingInfo.status = "signed"
+        signingInfo.appleBinary = isApple
+        signingInfo.authority = authorities
     }
     else {
         signingInfo.status = "unsigned"
     }
-    signingInfo.appleBinary = isApple
-    signingInfo.authority = authorities
+    
+    
     return signingInfo
 }
 
