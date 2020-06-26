@@ -15,7 +15,6 @@ func runLoginItems(usernames: Array<String>, system_info: SystemInfo) {
     }
 }
 
-//get login items - this will be a doozy
 func getLoginItems(users: Array<String>, system_info: SystemInfo) -> Array<Application> {
     var loginApps:[String] = []
     var loginItems = Array<Application>()
@@ -37,7 +36,6 @@ func getLoginItems(users: Array<String>, system_info: SystemInfo) -> Array<Appli
                 let bookmark = object as! Data
                 let properties = NSURL.resourceValues(forKeys: [URLResourceKey(rawValue: "NSURLBookmarkAllPropertiesKey")], fromBookmarkData: bookmark)! as NSDictionary
                 loginApps.append(((properties["NSURLBookmarkAllPropertiesKey"] as! NSDictionary)["_NSURLPathKey"]) as! String)
-                //print((properties["NSURLBookmarkAllPropertiesKey"] as! NSDictionary)["_NSURLPathKey"])
             }
             else if object is NSDictionary {
                 let item = object as! NSDictionary
@@ -52,11 +50,7 @@ func getLoginItems(users: Array<String>, system_info: SystemInfo) -> Array<Appli
 
     loginApps = Array(Set(loginApps))
     for app in loginApps{
-        //var loginItems = [String:Any]()
         loginItems.append(parseApp(app_path: app, system_info: system_info))
-        //loginItems.updateValue("login_items", forKey: "module")
-        //loginItems.updateValue(getSystemInfo()["hostname"]!, forKey: "hostname")
-        //loginItems.updateValue(getSystemInfo()["UUID"]!, forKey: "UUID")
 
     }
     return loginItems

@@ -9,8 +9,6 @@
 import Foundation
 import CommonCrypto
 
-//let apikey = "5fdc8b8e20a5ba7427e86e1699c784927e2d5a9b1146a9cbf201c2b7d71df127"
-
 func isAdmin() -> Bool {
     if #available(OSX 10.12, *) {
         if ProcessInfo.processInfo.fullUserName == "System Administrator" || ProcessInfo.processInfo.fullUserName == "root" {
@@ -141,7 +139,6 @@ func getSigningStatus(file: NSURL) -> SigningInfo {
     let errSecSuccess: OSStatus = 0
     let kSecCSSigningInformation = 0x2
     let kSecCodeInfoCertificates = "certificates"
-    //let signingInfo: NSMutableDictionary = [:]
     var signingInfo = SigningInfo(appleBinary: false, authority: [], status: "")
     let sigCheckFlags = kSecCSStrictValidate_kSecCSCheckAllArchitectures_kSecCSCheckNestedCode
     var signedStatus = 0

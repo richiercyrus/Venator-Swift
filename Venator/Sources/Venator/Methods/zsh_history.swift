@@ -3,7 +3,7 @@
 import Foundation
 
 func runZshHistory(usernames: Array<String>, system_info: SystemInfo) {
-    // get bash history
+    // get zsh history
     print("[+] Gathering zsh history data")
     let zsh_history = getZshHistory(users: usernames,
                                       system_info: system_info)

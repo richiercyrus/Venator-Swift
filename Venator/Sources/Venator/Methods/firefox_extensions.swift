@@ -26,7 +26,7 @@ func getFirefoxExtensions(users: Array<String>, system_info: SystemInfo) -> Arra
             if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let addons = jsonResult["addons"] as? [Dictionary<String, AnyObject>] {
                 for i in addons {
                     let locale = i["defaultLocale"] as? Dictionary<String, AnyObject>
-                    var updateDate = i["updateDate"] // TODO figure out this NSFCNumber nonsense
+                    var updateDate = i["updateDate"]
                     if updateDate == nil {
                         updateDate = "" as String as AnyObject
                     }
@@ -45,7 +45,7 @@ func getFirefoxExtensions(users: Array<String>, system_info: SystemInfo) -> Arra
                                                        extension_update_url: i["updateURL"]! as? String,
                                                        extension_options_url: i["optionsURL"]! as? String,
                                                        extension_install_date: i["installDate"]! as? String,
-                                                       extension_last_updated: nil, // TODO figure out this NSFCNumber nonsense
+                                                       extension_last_updated: nil, 
                                                        extension_source_uri: i["sourceURI"]! as? String,
                                                        extension_name: locale!["name"]! as? String,
                                                        extension_description: description,

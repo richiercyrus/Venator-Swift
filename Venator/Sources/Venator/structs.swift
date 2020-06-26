@@ -24,8 +24,6 @@ struct VenatorConfig {
 }
 
 struct VenatorData: Encodable {
-    //let begin_collection:String
-    //var finish_collection:String?
     var system_info:SystemInfo?
     var launch_agents:Array<LaunchItem>?
     var launch_daemons:Array<LaunchItem>?

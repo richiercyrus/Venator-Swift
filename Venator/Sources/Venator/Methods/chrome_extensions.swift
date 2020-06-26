@@ -13,7 +13,6 @@ func runChromeExtensions(usernames: Array<String>, system_info: SystemInfo) {
     print("[+] Gathering Chrome extensions data")
     let chrome_extensions = getChromeExtensions(users: usernames,
                                                   system_info: system_info)
-    //print(chrome_extensions)
     if chrome_extensions.count > 0 {
         config.venator_data.chrome_extensions = chrome_extensions
     }
