@@ -42,6 +42,7 @@
 		72C6AE3C2467DFA600CBFC2B /* network_connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3B2467DFA600CBFC2B /* network_connections.swift */; };
 		72C6AE3E2467DFD300CBFC2B /* event_taps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3D2467DFD300CBFC2B /* event_taps.swift */; };
 		72C6AE402467DFF400CBFC2B /* shell_startup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */; };
+		88C5698024A620A10072208B /* zsh_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5697F24A620A10072208B /* zsh_history.swift */; };
 		OBJ_29 /* launch_agents.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* launch_agents.swift */; };
 		OBJ_30 /* launch_daemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* launch_daemons.swift */; };
 		OBJ_31 /* system_info.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* system_info.swift */; };
@@ -92,6 +93,7 @@
 		72C6AE3B2467DFA600CBFC2B /* network_connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network_connections.swift; sourceTree = "<group>"; };
 		72C6AE3D2467DFD300CBFC2B /* event_taps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event_taps.swift; sourceTree = "<group>"; };
 		72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shell_startup.swift; sourceTree = "<group>"; };
+		88C5697F24A620A10072208B /* zsh_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zsh_history.swift; sourceTree = "<group>"; };
 		OBJ_10 /* launch_agents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launch_agents.swift; sourceTree = "<group>"; };
 		OBJ_11 /* launch_daemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launch_daemons.swift; sourceTree = "<group>"; };
 		OBJ_12 /* system_info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system_info.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				72C6AE3D2467DFD300CBFC2B /* event_taps.swift */,
 				72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */,
 				7257705C247E26FA000E61AA /* kernel_extensions.swift */,
+				88C5697F24A620A10072208B /* zsh_history.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				72C6AE302467DE7400CBFC2B /* firefox_extensions.swift in Sources */,
 				72C6AE2E2467DE6500CBFC2B /* chrome_extensions.swift in Sources */,
 				OBJ_31 /* system_info.swift in Sources */,
+				88C5698024A620A10072208B /* zsh_history.swift in Sources */,
 				7257705D247E26FA000E61AA /* kernel_extensions.swift in Sources */,
 				72C6AE322467DE8700CBFC2B /* install_history.swift in Sources */,
 				72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */,

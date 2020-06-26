@@ -31,6 +31,8 @@ func fullCollection() {
     runApps(system_info: config.venator_data.system_info!)
     runBashHistory(usernames: config.usernames,
                    system_info: config.venator_data.system_info!)
+    runZshHistory(usernames: config.usernames,
+                  system_info: config.venator_data.system_info!)
     runLoginItems(usernames: config.usernames,
                   system_info: config.venator_data.system_info!)
     runFireFoxExtensions(usernames: config.usernames,
@@ -94,6 +96,9 @@ func moduleCollection() {
             case "bashhistory":
                 runBashHistory(usernames: config.usernames,
                                system_info: config.venator_data.system_info!)
+            case "zshhistory":
+            runZshHistory(usernames: config.usernames,
+                           system_info: config.venator_data.system_info!)
             case "loginitems":
                 runLoginItems(usernames: config.usernames,
                                system_info: config.venator_data.system_info!)

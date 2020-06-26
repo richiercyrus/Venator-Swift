@@ -34,6 +34,7 @@ struct VenatorData: Encodable {
     var gatekeeper:GateKeeper?
     var cron_jobs:Array<CronJob>?
     var bash_history:Array<BashHistory>?
+    var zsh_history:Array<ZshHistory>?
     var network_connections:Array<NetworkConnection>?
     var environment_variables:EnvironmentVariables?
     var applications:Array<Application>?
@@ -107,6 +108,13 @@ struct BashHistory: Encodable {
     var uuid:String
     var user:String
     var bash_commands:String
+}
+
+struct ZshHistory: Encodable {
+    var hostname:String
+    var uuid:String
+    var user:String
+    var zsh_commands:String
 }
 
 struct LaunchItem: Encodable {
