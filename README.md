@@ -1,4 +1,4 @@
-![](https://github.com/richiercyrus/Venator-Swift/blob/master/VenatorSwift.png")
+![](https://github.com/richiercyrus/Venator-Swift/blob/master/VenatorSwift.png)
 
 Author: [@rrcyrus](https://twitter.com/rrcyrus)
 
