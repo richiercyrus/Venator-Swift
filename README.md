@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/richiercyrus/Venator/blob/master/images/venator4%20copy.png">
+<img src="https://github.com/richiercyrus/Venator-Swift/blob/master/VenatorSwift.png">
 </p>
 
 Venator is a python tool used for gathering data for the purpose of proactive macOS detection. Support for High Sierra & Mojave using native macOS python version (2.7.x). Happy Hunting!
