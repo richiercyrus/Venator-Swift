@@ -2,7 +2,7 @@
 
 Author: [@rrcyrus](https://twitter.com/rrcyrus)
 
-Contributors: [@Airzero24](https://twitter.com/Airzero24)
+Major Contributor: [@Airzero24](https://twitter.com/Airzero24)
 
 Venator-Swift is a Swift tool used for gathering data for the purpose of proactive macOS detection. Support for 10.13 and above. Happy Hunting!
 
