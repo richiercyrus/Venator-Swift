@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"Venator::VenatorPackageTests::ProductTarget" /* VenatorPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_44 /* Build configuration list for PBXAggregateTarget "VenatorPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_47 /* PBXTargetDependency */,
+			);
+			name = VenatorPackageTests;
+			productName = VenatorPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		7257705D247E26FA000E61AA /* kernel_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257705C247E26FA000E61AA /* kernel_extensions.swift */; };
+		725BB486246A54C5002151D6 /* virus_total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725BB485246A54C5002151D6 /* virus_total.swift */; };
+		725F4BF4247A20A60064C407 /* dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F4BF3247A20A60064C407 /* dispatcher.swift */; };
+		725F4BF7247A44620064C407 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 725F4BF6247A44620064C407 /* ArgumentParser */; };
+		725F4BF9247AE1E40064C407 /* s3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F4BF8247AE1E40064C407 /* s3.swift */; };
+		72C6AE2024672D2100CBFC2B /* sip_status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE1F24672D2100CBFC2B /* sip_status.swift */; };
+		72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE212467313E00CBFC2B /* gatekeeper.swift */; };
+		72C6AE242467340200CBFC2B /* cron_jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE232467340200CBFC2B /* cron_jobs.swift */; };
+		72C6AE26246737A100CBFC2B /* applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE25246737A100CBFC2B /* applications.swift */; };
+		72C6AE282467D53D00CBFC2B /* bash_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE272467D53D00CBFC2B /* bash_history.swift */; };
+		72C6AE2A2467D82900CBFC2B /* login_items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE292467D82900CBFC2B /* login_items.swift */; };
+		72C6AE2E2467DE6500CBFC2B /* chrome_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */; };
+		72C6AE302467DE7400CBFC2B /* firefox_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */; };
+		72C6AE322467DE8700CBFC2B /* install_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE312467DE8700CBFC2B /* install_history.swift */; };
+		72C6AE382467DF6C00CBFC2B /* environment_variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE372467DF6C00CBFC2B /* environment_variables.swift */; };
+		72C6AE3A2467DF8400CBFC2B /* periodic_scripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE392467DF8400CBFC2B /* periodic_scripts.swift */; };
+		72C6AE3C2467DFA600CBFC2B /* network_connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3B2467DFA600CBFC2B /* network_connections.swift */; };
+		72C6AE3E2467DFD300CBFC2B /* event_taps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3D2467DFD300CBFC2B /* event_taps.swift */; };
+		72C6AE402467DFF400CBFC2B /* shell_startup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */; };
+		88C5698024A620A10072208B /* zsh_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5697F24A620A10072208B /* zsh_history.swift */; };
+		OBJ_29 /* launch_agents.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* launch_agents.swift */; };
+		OBJ_30 /* launch_daemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* launch_daemons.swift */; };
+		OBJ_31 /* system_info.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* system_info.swift */; };
+		OBJ_32 /* system_users.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* system_users.swift */; };
+		OBJ_33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* main.swift */; };
+		OBJ_34 /* structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* structs.swift */; };
+		OBJ_35 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* utils.swift */; };
+		OBJ_42 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_53 /* VenatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* VenatorTests.swift */; };
+		OBJ_54 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* XCTestManifests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72C6AE1D246717CF00CBFC2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Venator::Venator";
+			remoteInfo = Venator;
+		};
+		72C6AE1E246717D100CBFC2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Venator::VenatorTests";
+			remoteInfo = VenatorTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7257705C247E26FA000E61AA /* kernel_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kernel_extensions.swift; sourceTree = "<group>"; };
+		725BB485246A54C5002151D6 /* virus_total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = virus_total.swift; sourceTree = "<group>"; };
+		725F4BF3247A20A60064C407 /* dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dispatcher.swift; sourceTree = "<group>"; };
+		725F4BF8247AE1E40064C407 /* s3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s3.swift; sourceTree = "<group>"; };
+		72C6AE1F24672D2100CBFC2B /* sip_status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sip_status.swift; sourceTree = "<group>"; };
+		72C6AE212467313E00CBFC2B /* gatekeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gatekeeper.swift; sourceTree = "<group>"; };
+		72C6AE232467340200CBFC2B /* cron_jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cron_jobs.swift; sourceTree = "<group>"; };
+		72C6AE25246737A100CBFC2B /* applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = applications.swift; sourceTree = "<group>"; };
+		72C6AE272467D53D00CBFC2B /* bash_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bash_history.swift; sourceTree = "<group>"; };
+		72C6AE292467D82900CBFC2B /* login_items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_items.swift; sourceTree = "<group>"; };
+		72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chrome_extensions.swift; sourceTree = "<group>"; };
+		72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firefox_extensions.swift; sourceTree = "<group>"; };
+		72C6AE312467DE8700CBFC2B /* install_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = install_history.swift; sourceTree = "<group>"; };
+		72C6AE372467DF6C00CBFC2B /* environment_variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = environment_variables.swift; sourceTree = "<group>"; };
+		72C6AE392467DF8400CBFC2B /* periodic_scripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = periodic_scripts.swift; sourceTree = "<group>"; };
+		72C6AE3B2467DFA600CBFC2B /* network_connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network_connections.swift; sourceTree = "<group>"; };
+		72C6AE3D2467DFD300CBFC2B /* event_taps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event_taps.swift; sourceTree = "<group>"; };
+		72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shell_startup.swift; sourceTree = "<group>"; };
+		88C5697F24A620A10072208B /* zsh_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zsh_history.swift; sourceTree = "<group>"; };
+		OBJ_10 /* launch_agents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launch_agents.swift; sourceTree = "<group>"; };
+		OBJ_11 /* launch_daemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launch_daemons.swift; sourceTree = "<group>"; };
+		OBJ_12 /* system_info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system_info.swift; sourceTree = "<group>"; };
+		OBJ_13 /* system_users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system_users.swift; sourceTree = "<group>"; };
+		OBJ_14 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_15 /* structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structs.swift; sourceTree = "<group>"; };
+		OBJ_16 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		OBJ_19 /* VenatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenatorTests.swift; sourceTree = "<group>"; };
+		OBJ_20 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		"Venator::Venator::Product" /* Venator */ = {isa = PBXFileReference; lastKnownFileType = text; path = Venator; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Venator::VenatorTests::Product" /* VenatorTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = VenatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				725F4BF7247A44620064C407 /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_17 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* VenatorTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* VenatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* VenatorTests.swift */,
+				OBJ_20 /* XCTestManifests.swift */,
+			);
+			name = VenatorTests;
+			path = Tests/VenatorTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Venator::Venator::Product" /* Venator */,
+				"Venator::VenatorTests::Product" /* VenatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_17 /* Tests */,
+				OBJ_21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Venator */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* Venator */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Methods */,
+				OBJ_14 /* main.swift */,
+				OBJ_15 /* structs.swift */,
+				OBJ_16 /* utils.swift */,
+				725BB485246A54C5002151D6 /* virus_total.swift */,
+				725F4BF3247A20A60064C407 /* dispatcher.swift */,
+				725F4BF8247AE1E40064C407 /* s3.swift */,
+			);
+			name = Venator;
+			path = Sources/Venator;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* launch_agents.swift */,
+				OBJ_11 /* launch_daemons.swift */,
+				OBJ_12 /* system_info.swift */,
+				OBJ_13 /* system_users.swift */,
+				72C6AE1F24672D2100CBFC2B /* sip_status.swift */,
+				72C6AE212467313E00CBFC2B /* gatekeeper.swift */,
+				72C6AE232467340200CBFC2B /* cron_jobs.swift */,
+				72C6AE25246737A100CBFC2B /* applications.swift */,
+				72C6AE272467D53D00CBFC2B /* bash_history.swift */,
+				72C6AE292467D82900CBFC2B /* login_items.swift */,
+				72C6AE2D2467DE6500CBFC2B /* chrome_extensions.swift */,
+				72C6AE2F2467DE7400CBFC2B /* firefox_extensions.swift */,
+				72C6AE312467DE8700CBFC2B /* install_history.swift */,
+				72C6AE372467DF6C00CBFC2B /* environment_variables.swift */,
+				72C6AE392467DF8400CBFC2B /* periodic_scripts.swift */,
+				72C6AE3B2467DFA600CBFC2B /* network_connections.swift */,
+				72C6AE3D2467DFD300CBFC2B /* event_taps.swift */,
+				72C6AE3F2467DFF400CBFC2B /* shell_startup.swift */,
+				7257705C247E26FA000E61AA /* kernel_extensions.swift */,
+				88C5697F24A620A10072208B /* zsh_history.swift */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Venator::SwiftPMPackageDescription" /* VenatorPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_38 /* Build configuration list for PBXNativeTarget "VenatorPackageDescription" */;
+			buildPhases = (
+				OBJ_41 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VenatorPackageDescription;
+			productName = VenatorPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Venator::Venator" /* Venator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_25 /* Build configuration list for PBXNativeTarget "Venator" */;
+			buildPhases = (
+				OBJ_28 /* Sources */,
+				OBJ_36 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Venator;
+			packageProductDependencies = (
+				725F4BF6247A44620064C407 /* ArgumentParser */,
+			);
+			productName = Venator;
+			productReference = "Venator::Venator::Product" /* Venator */;
+			productType = "com.apple.product-type.tool";
+		};
+		"Venator::VenatorTests" /* VenatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_49 /* Build configuration list for PBXNativeTarget "VenatorTests" */;
+			buildPhases = (
+				OBJ_52 /* Sources */,
+				OBJ_55 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_56 /* PBXTargetDependency */,
+			);
+			name = VenatorTests;
+			productName = VenatorTests;
+			productReference = "Venator::VenatorTests::Product" /* VenatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Venator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			packageReferences = (
+				725F4BF5247A44620064C407 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
+			productRefGroup = OBJ_21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Venator::Venator" /* Venator */,
+				"Venator::SwiftPMPackageDescription" /* VenatorPackageDescription */,
+				"Venator::VenatorPackageTests::ProductTarget" /* VenatorPackageTests */,
+				"Venator::VenatorTests" /* VenatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				72C6AE402467DFF400CBFC2B /* shell_startup.swift in Sources */,
+				72C6AE282467D53D00CBFC2B /* bash_history.swift in Sources */,
+				OBJ_29 /* launch_agents.swift in Sources */,
+				OBJ_30 /* launch_daemons.swift in Sources */,
+				72C6AE3A2467DF8400CBFC2B /* periodic_scripts.swift in Sources */,
+				72C6AE2024672D2100CBFC2B /* sip_status.swift in Sources */,
+				72C6AE302467DE7400CBFC2B /* firefox_extensions.swift in Sources */,
+				72C6AE2E2467DE6500CBFC2B /* chrome_extensions.swift in Sources */,
+				OBJ_31 /* system_info.swift in Sources */,
+				88C5698024A620A10072208B /* zsh_history.swift in Sources */,
+				7257705D247E26FA000E61AA /* kernel_extensions.swift in Sources */,
+				72C6AE322467DE8700CBFC2B /* install_history.swift in Sources */,
+				72C6AE222467313E00CBFC2B /* gatekeeper.swift in Sources */,
+				725F4BF4247A20A60064C407 /* dispatcher.swift in Sources */,
+				OBJ_32 /* system_users.swift in Sources */,
+				OBJ_33 /* main.swift in Sources */,
+				72C6AE3C2467DFA600CBFC2B /* network_connections.swift in Sources */,
+				72C6AE242467340200CBFC2B /* cron_jobs.swift in Sources */,
+				OBJ_34 /* structs.swift in Sources */,
+				725BB486246A54C5002151D6 /* virus_total.swift in Sources */,
+				72C6AE3E2467DFD300CBFC2B /* event_taps.swift in Sources */,
+				72C6AE382467DF6C00CBFC2B /* environment_variables.swift in Sources */,
+				725F4BF9247AE1E40064C407 /* s3.swift in Sources */,
+				72C6AE26246737A100CBFC2B /* applications.swift in Sources */,
+				72C6AE2A2467D82900CBFC2B /* login_items.swift in Sources */,
+				OBJ_35 /* utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_42 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_53 /* VenatorTests.swift in Sources */,
+				OBJ_54 /* XCTestManifests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Venator::VenatorTests" /* VenatorTests */;
+			targetProxy = 72C6AE1E246717D100CBFC2B /* PBXContainerItemProxy */;
+		};
+		OBJ_56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Venator::Venator" /* Venator */;
+			targetProxy = 72C6AE1D246717CF00CBFC2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Venator.xcodeproj/Venator_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@executable_path",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Venator;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Venator.xcodeproj/Venator_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@executable_path",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Venator;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Venator.xcodeproj/VenatorTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = VenatorTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Venator.xcodeproj/VenatorTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = VenatorTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "Venator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_25 /* Build configuration list for PBXNativeTarget "Venator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_26 /* Debug */,
+				OBJ_27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_38 /* Build configuration list for PBXNativeTarget "VenatorPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_39 /* Debug */,
+				OBJ_40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_44 /* Build configuration list for PBXAggregateTarget "VenatorPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_45 /* Debug */,
+				OBJ_46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_49 /* Build configuration list for PBXNativeTarget "VenatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_50 /* Debug */,
+				OBJ_51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		725F4BF5247A44620064C407 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		725F4BF6247A44620064C407 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 725F4BF5247A44620064C407 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
