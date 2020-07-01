@@ -39,5 +39,5 @@ eventtap
 kext
 ```
 
-**A notarized and signed version of Venator can be found under Release. The installation package will place Venator in /usr/local/bin/. Alternatively, you can expand the package with the pkgutil command.**
+**A notarized and signed version of Venator can be found under [Releases](https://github.com/richiercyrus/Venator-Swift/releases). The installation package will place Venator in /usr/local/bin/. Alternatively, you can expand the package with the pkgutil command.**
 
