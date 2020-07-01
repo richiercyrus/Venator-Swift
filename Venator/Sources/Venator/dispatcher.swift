@@ -46,6 +46,7 @@ func fullCollection() {
                            system_info: config.venator_data.system_info!)
     runEventTaps(system_info: config.venator_data.system_info!)
     runKernelExtensions(system_info: config.venator_data.system_info!)
+    runPFRules(system_info: config.venator_data.system_info!)
     
     let final_json = getFinalJson()
     
@@ -123,6 +124,8 @@ func moduleCollection() {
                 runEventTaps(system_info: config.venator_data.system_info!)
             case "kext":
                 runKernelExtensions(system_info: config.venator_data.system_info!)
+            case "pfrules":
+                runPFRules(system_info: config.venator_data.system_info!)
             default:
                 print("[!] Module \(module) does not exist")
         }
