@@ -102,7 +102,7 @@ func moduleCollection() {
             case "loginitems":
                 runLoginItems(usernames: config.usernames,
                                system_info: config.venator_data.system_info!)
-            case "firefox":
+            case "firefoxExtension":
                 runFireFoxExtensions(usernames: config.usernames,
                                system_info: config.venator_data.system_info!)
             case "chromeExtension":
@@ -119,6 +119,8 @@ func moduleCollection() {
             case "startupscripts":
                 runShellStartupScripts(usernames: config.usernames,
                                        system_info: config.venator_data.system_info!)
+            case "eventtap":
+                runEventTaps(system_info: config.venator_data.system_info!)
             case "kext":
                 runKernelExtensions(system_info: config.venator_data.system_info!)
             default:

@@ -22,7 +22,8 @@ func getZshHistory(users: Array<String>, system_info: SystemInfo) -> Array<ZshHi
         }
         do {
             let contents = try NSString(contentsOfFile: path,
-                                        encoding: String.Encoding.utf8.rawValue)
+                                        //encoding: String.Encoding.utf8.rawValue)
+                encoding: String.Encoding.isoLatin2.rawValue)
             let history = ZshHistory(hostname: system_info.hostname,
                                       uuid: system_info.uuid,
                                       user: i,
