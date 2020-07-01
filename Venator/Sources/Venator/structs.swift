@@ -44,6 +44,7 @@ struct VenatorData: Encodable {
     var chrome_extensions:Array<ChromeExtension>?
     var event_taps:Array<EventTap>?
     var kernel_extensions:Array<KernelExtension>?
+    var pf_rules:PFRules?
     
     func toJson(data: VenatorData) -> String {
         let jsonData = try! JSONEncoder().encode(data)
@@ -213,4 +214,10 @@ struct KernelExtension: Encodable {
     var CFBundleIdentifier:String?
     var OSBundleRequired:String?
     var CFBundleGetInfoString:String?
+}
+
+struct PFRules: Encodable {
+    var hostname:String
+    var uuid:String
+    var rules:String
 }
